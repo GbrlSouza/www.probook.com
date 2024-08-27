@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+h2 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 70px;
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+
+h3 {
+  font-family: "Amaranth", sans-serif;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.header {
+  height: 150px;
+  width: 100vw;
+  background-color: #fff;
+  display: flex;
+  padding: 40px 20%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  transition: all 0.4s ease-in-out;
+}
+
+.ghost-helper {
+  height: 150px;
+}
+
+.header-logo img {
+  transition: all 0.4s ease-in-out;
+}
+
+.header-navigation {
+  width: 430px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-navigation a {
+  text-decoration: none;
+  color: black;
+  font-family: "Amaranth", sans-serif;
+  font-size: 24px;
+  position: relative;
+}
+
+.header-navigation a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background-color: #ff6666;
+  transition: all 0.5s ease-in-out;
+  top: 28px;
+  right: 0;
+}
+
+.header-navigation a:hover::after {
+  width: 100%;
+}
+
+.container-intro {
+  width: 100%;
+  height: 650px;
+  background-color: #31BEBE;
+  border-radius: 0px 0px 0px 318px;
+  display: flex;
+}
+
+.content-intro h1 {
+  font-family: 'Amaranth', sans-serif;
+  color: #fff;
+  font-size: 72px;
+  line-height: 87px;
+  font-style: normal;
+  font-weight: normal;
+  padding-bottom: 48px;
+}
+
+.div-intro {
+  margin-top: 50px;
+}
+
+.content-intro p {
+  font-size: 25px;
+  color: #fff;
+  width: 400px;
+}
+
+.container-layout {
+  width: 100%;
+  padding: 40px 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-intro {
+  margin-top: 80px;
+}
+
+.content-intro, .content-features {
+  width: 600px;
+}
+
+.container-features {
+  margin-top: 120px;
+  height: 480px;
+}
+
+.content-features li {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.content-features, .titulo-pre-rodape h2 {
+  margin-bottom: 50px;
+}
+
+.features-div {
+  font-family: "Amaranth";
+  width: 100%;
+  text-align: center;
+  height: 600px;
+  opacity: 0;
+  margin-top: 250px;
+}
+
+.features-div h2 {
+  margin-top: 40px;
+}
+
+.container-visao {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.topicos-div {
+  width: 343px;
+  border-radius: 10px;
+  background-color: #ff6666;
+  padding-top: 44px;
+  padding-bottom: 5.5px;
+  margin-top: 40px;
+}
+
+.topicos-div h3 {
+  margin-top: 20px;
+  color: white;
+}
+
+.topicos-div:nth-child(2) {
+  background-color: #fed843;
+  margin-left: 58px;
+  margin-right: 58px;
+}
+
+.topicos-div:nth-child(2) h3 {
+  color: black;
+}
+
+.topicos-div:nth-child(3) {
+  background-color: #31bebe;
+}
+
+.text-content {
+  width: 240px;
+  margin: auto;
+  margin-top: 40px;
+  color: white;
+  text-align: center;
+}
+
+.text-content p {
+  font-size: 18px;
+}
+
+.topicos-div:nth-child(2) .text-content {
+  color: black;
+}
+
+.div-btn {
+  text-decoration: none;
+  margin: auto;
+  width: 96%;
+  height: 96px;
+  border-radius: 10px;
+  background: #ffff;
+  border: none;
+  font-family: "Amaranth";
+  font-size: 25px;
+  color: black;
+  margin-top: 41px;
+  cursor: pointer;
+}
+
+.text-btn {
+  text-decoration: none;
+  color: black;
+}
+
+.text-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.active {
+  animation-name: fadein;
+  animation-duration: 2s;
+  opacity: 1;
+}
+
+.active h2 {
+  animation-name: fade-in-h2;
+  animation: fade-in-h2 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-h2 {
+  from {
+    margin-top: 80px;
+  }
+  to {
+    margin-top: 40px;
+  }
+}
+
+.pre-rodape {
+  height: 650px;
+  background: #fed843;
+  border-radius: 0px 318px 0px 0px;
+  z-index: -1;
+}
+
+.pre-rodape p {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.div-sobre {
+  margin-top: 150px;
+  padding-top: 90px;
+}
+
+footer {
+  align-items: center;
+}
+
+footer p {
+  color: #000;
+  top: 480px;
+  font-size: 18px;
+}
+
+footer .img {
+  max-width: 100px;
+  max-height: 50px;
+}
